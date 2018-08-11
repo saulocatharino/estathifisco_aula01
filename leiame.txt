@@ -1,0 +1,5 @@
+Exemplo de classificação de imagens criado por Saulo J.'. Catharino para o Professor Thiago Marques.
+
+para executar:
+
+python3 main.py
