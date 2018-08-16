@@ -53,7 +53,7 @@ clf_lin.fit(X,Y)
 
 print('Término do treinamento do modelo SVC')
 
-predicao = clf_lin.predict(teste.reshape(1,-1))
+predicao = clf_lin.predict(flamengo.reshape(1,-1))
 
 score = clf_lin.score(X,Y)
 
@@ -75,5 +75,32 @@ cv2.imshow("resultado", resultado)
 cv2.imshow("teste", teste1)
 cv2.waitKey(0)
 
+print('----------------------------------------------------------')
+
+print('Início do treinamento do modelo SVR')
+
+svr_lin.fit(X,Y)
+
+print('Término do treinamento do modelo SVR')
+
+predicao = svr_lin.predict(flamengo.reshape(1,-1))
+
+score = svr_lin.score(X,Y)
 
 
+print(predicao)
+print(score)
+
+if predicao == 1:
+   resultado = atletico_g
+if predicao == 2:
+   resultado = corinthians_g
+if predicao == 3:
+   resultado = flamengo_g
+if predicao == 4:
+   resultado = palmeiras_g
+
+
+cv2.imshow("resultado", resultado)
+cv2.imshow("teste", teste1)
+cv2.waitKey(0)
